@@ -29,9 +29,65 @@ TODOLIST TAXIBE
     []-
 
 
--->
+--> Trajet
 
     #base   
+    []-
+    []-
+    []-
+
+
+    #fonction
+    []-
+    []-
+    []-
+
+    #design
+    []-
+    []-
+    []-
+
+    #integration
+    []-
+    []-
+    []-
+
+    #autre
+    []-
+    []-
+    []-
+
+--> Vehicule
+
+        #base   
+    []-
+    []-
+    []-
+
+
+    #fonction
+    []-
+    []-
+    []-
+
+    #design
+    []-
+    []-
+    []-
+
+    #integration
+    []-
+    []-
+    []-
+
+    #autre
+    []-
+    []-
+    []-
+
+--> Salaire
+
+        #base   
     []-
     []-
     []-
