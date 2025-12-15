@@ -37,10 +37,12 @@
     <a href="/trajets/new"> Enregistrer un trajet</a>
 
     <hr>
+    <p>Gestion des véhicules</p>
     <a href="/vehicules/available">Véhicules disponibles par date</a>
     <a href="/vehicules/pannes">Taux de panne mensuel par véhicule </a>
 
     <hr>
+    <p>Gestion des salaires</p>
     <a href="/salaire">Liste des salaires journaliers</a>
     <a href="/salaire/form">Modifier les paramètres de salaire</a>
 
