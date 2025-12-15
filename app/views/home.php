@@ -33,9 +33,16 @@
     <p>Gestion des trajets, véhicules et chauffeurs</p>
 
     <a href="/trajets">Liste des trajets par jour</a>
+    <a href="/trajets/top">Les trajets les plus rentables par jour</a>
     <a href="/trajets/new"> Enregistrer un trajet</a>
 
     <hr>
+    <a href="/vehicules/available">Véhicules disponibles par date</a>
+    <a href="/vehicules/pannes">Taux de panne mensuel par véhicule </a>
+
+    <hr>
+    <a href="/salaire">Liste des salaires journaliers</a>
+    <a href="/salaire/form">Modifier les paramètres de salaire</a>
 
 </div>
 

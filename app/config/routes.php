@@ -5,6 +5,8 @@ use app\controllers\TrajetController;
 use app\middlewares\SecurityHeadersMiddleware;
 use flight\Engine;
 use flight\net\Router;
+use app\controllers\PanneController;
+use app\controllers\SalaireController;
 
 /** 
  * @var Router $router 
@@ -25,10 +27,15 @@ $router->group('', function(Router $router) use ($app) {
     $router->get('/trajets/new', [TrajetController::class, 'form']);
     $router->post('/trajets', [TrajetController::class, 'store']);
 
-    $router->group('/api', function() use ($router) {
-        $router->get('/users', [ApiExampleController::class, 'getUsers']);
-        $router->get('/users/@id:[0-9]+', [ApiExampleController::class, 'getUser']);
-        $router->post('/users/@id:[0-9]+', [ApiExampleController::class, 'updateUser']);
-    });
+    $router->get('/trajets/top', [TrajetController::class, 'top']);
+
+    $router->get('/vehicules/available', [PanneController::class, 'available']);
+    $router->get('/vehicules/pannes', [PanneController::class, 'monthly']);
+
+    $router->get('/salaire', [SalaireController::class, 'index']);
+    $router->get('/salaire/form', [SalaireController::class, 'form']);
+    $router->post('/salaire/store', [SalaireController::class, 'store']);
+
+
 
 }, [ SecurityHeadersMiddleware::class ]);

@@ -16,14 +16,23 @@ class TrajetController {
     }
 
     public function index() {
-        $date = $_GET['date'] ?? date('Y-m-d');
-        $trajets = $this->model->getTrajetsByDate($date);
+    $date = $_GET['date'] ?? 'all';
 
-        $this->app->render('trajet/list', [
-            'date' => $date,
-            'trajets' => $trajets
-        ]);
+    if ($date === 'all') {
+        $trajets = $this->model->getAllTrajets();
+    } else {
+        $trajets = $this->model->getTrajetsByDate($date);
     }
+
+    $dates = $this->model->getAvailableDates();
+
+    $this->app->render('trajet/list', [
+        'date' => $date,
+        'trajets' => $trajets,
+        'dates' => $dates
+    ]);
+    }
+
 
     public function form() {
         $this->app->render('trajet/form');
@@ -35,4 +44,17 @@ class TrajetController {
 
         $this->app->redirect('/trajets');
     }
+
+    public function top() {
+    $date = $_GET['date'] ?? null;
+    $dates = $this->model->getAvailableDates();
+    $trajets = $this->model->getTopTrajetsByDate($date);
+
+    $this->app->render('trajet/top', [
+        'date' => $date,
+        'dates' => $dates,
+        'trajets' => $trajets
+    ]);
+    }
+
 }

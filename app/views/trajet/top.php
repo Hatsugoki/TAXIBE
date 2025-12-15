@@ -1,8 +1,8 @@
-<h2>Trajets</h2>
+<h2>Trajets les plus rentables <?= $date ? "du $date" : "tous les jours" ?></h2>
 
-<form method="get" action="/trajets">
+<form method="get" action="/trajets/top">
     <select name="date">
-        <option value="all"> Tous les jours</option>
+        <option value="">Toutes les dates</option>
         <?php foreach ($dates as $d): ?>
             <option value="<?= $d ?>" <?= ($date === $d) ? 'selected' : '' ?>>
                 <?= $d ?>
@@ -19,6 +19,8 @@
         <th>Date</th>
         <th>Chauffeur</th>
         <th>Véhicule</th>
+        <th>Départ</th>
+        <th>Arrivée</th>
         <th>KM</th>
         <th>Recette</th>
         <th>Carburant</th>
@@ -29,11 +31,13 @@
     <tr>
         <td><?= $t['date_jour'] ?></td>
         <td><?= $t['chauffeur'] ?></td>
-        <td><?= $t['immatriculation'] ?>(<?= $t['modele'] ?>)</td>
-        <td><?= $t['km_effectue'] ?></td>
-        <td><?= $t['total_recette'] ?></td>
-        <td><?= $t['total_carburant'] ?></td>
-        <td><b><?= $t['total_recette'] - $t['total_carburant'] ?></b></td>
+        <td><?= $t['immatriculation'] ?> (<?= $t['modele'] ?>)</td>
+        <td><?= $t['point_depart'] ?></td>
+        <td><?= $t['point_arrivee'] ?></td>
+        <td><?= $t['distance_km'] ?></td>
+        <td><?= $t['recette'] ?></td>
+        <td><?= $t['carburant'] ?></td>
+        <td><b><?= $t['benefice'] ?></b></td>
     </tr>
     <?php endforeach; ?>
 </table>
