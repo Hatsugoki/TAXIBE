@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="/assets/css/css.css">
+
+<div class="header">
+            <h1>Taxibe Gestion</h1>
+            <p>Plateforme de gestion des transports</p>
+</div>
+
 <h2>Salaires journaliers des chauffeurs</h2>
 
 <table border="1" cellpadding="6">

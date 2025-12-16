@@ -1,3 +1,9 @@
+<link rel="stylesheet" href="/assets/css/css.css">
+<div class="header">
+            <h1>Taxibe Gestion</h1>
+            <p>Plateforme de gestion des transports</p>
+</div>
+
 <h2>Véhicules disponibles le <?= $date ?></h2>
 
 <form method="get" action="/vehicules/available">

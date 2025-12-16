@@ -7,6 +7,7 @@ use flight\Engine;
 use flight\net\Router;
 use app\controllers\PanneController;
 use app\controllers\SalaireController;
+use app\controllers\AffectationController;
 
 /** 
  * @var Router $router 
@@ -35,6 +36,12 @@ $router->group('', function(Router $router) use ($app) {
     $router->get('/salaire', [SalaireController::class, 'index']);
     $router->get('/salaire/form', [SalaireController::class, 'form']);
     $router->post('/salaire/store', [SalaireController::class, 'store']);
+
+
+    $router->get('/affectations', [AffectationController::class, 'index']);
+    $router->get('/affectations/new', [AffectationController::class, 'form']);
+    $router->post('/affectations', [AffectationController::class, 'store']);
+
 
 
 

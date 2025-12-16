@@ -1,3 +1,10 @@
+<div class="header">
+            <h1>Taxibe Gestion</h1>
+            <p>Plateforme de gestion des transports</p>
+</div>
+
+<link rel="stylesheet" href="/assets/css/css.css">
+
 <h2>Trajets les plus rentables <?= $date ? "du $date" : "tous les jours" ?></h2>
 
 <form method="get" action="/trajets/top">
